@@ -11,27 +11,28 @@ uses
 type
   TformularioPadrao = class(TForm)
     lytMain: TLayout;
-    rctXMLControle: TRectangle;
-    lyt1TopXML: TLayout;
-    rctTopXML: TRectangle;
-    rctTopXMLFechar: TRectangle;
-    lbTopXMLFechar: TLabel;
-    ShadowEffect1: TShadowEffect;
-    FloatAnimation1: TFloatAnimation;
-    FloatAnimation2: TFloatAnimation;
-    imgTopXMLFechar: TImage;
-    rctTbXMLControle: TRectangle;
+    rctControle: TRectangle;
+    lyt1Top: TLayout;
+    rctTop: TRectangle;
+    rctTopFechar: TRectangle;
+    lbTopFechar: TLabel;
+    rctTbControle: TRectangle;
     rctMessage: TRectangle;
     lbMessage: TLabel;
-    ShadowEffect2: TShadowEffect;
+    sdwTop: TShadowEffect;
     lyt2Conteudo: TLayout;
     ShadowEffect3: TShadowEffect;
     lytLabel: TLayout;
     lbPadrao: TLabel;
+    lytTopFechar: TLayout;
+    sdwTopFechar: TShadowEffect;
+    TopFecharAnime1: TFloatAnimation;
+    TopFecharAnime2: TFloatAnimation;
+    PathFechar: TPath;
 
-  procedure rctTopXMLFecharClick(Sender: TObject);
-  procedure rctTopXMLFecharMouseLeave(Sender: TObject);
-  procedure rctTopXMLFecharMouseMove(Sender: TObject; Shift: TShiftState; X,
+  procedure rctTopFecharClick(Sender: TObject);
+  procedure rctTopFecharMouseLeave(Sender: TObject);
+  procedure rctTopFecharMouseMove(Sender: TObject; Shift: TShiftState; X,
     Y: Single);
   procedure FormCreate(Sender: TObject);
 
@@ -54,26 +55,26 @@ uses uGerenciador.Form;
 
 procedure TformularioPadrao.FormCreate(Sender: TObject);
 begin
-  corForm.RetanguloMouseMove(rctTopXML, frmMenuPrincipal);
-  corForm.RetanguloMouseMove(rctTbXMLControle, frmMenuPrincipal);
-  corForm.RetanguloMouseMove(rctXMLControle, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctTop, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctTbControle, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctControle, frmMenuPrincipal);
 end;
 
-procedure TformularioPadrao.rctTopXMLFecharClick(Sender: TObject);
+procedure TformularioPadrao.rctTopFecharClick(Sender: TObject);
 begin
   corForm.RetanguloMouseMove(frmMenuPrincipal.rctMain, frmMenuPrincipal);
   _Gerenciador.RemoveForm(Self.Caption);
 end;
 
-procedure TformularioPadrao.rctTopXMLFecharMouseLeave(Sender: TObject);
+procedure TformularioPadrao.rctTopFecharMouseLeave(Sender: TObject);
 begin
-  corForm.RetanguloMouseLeave(rctTopXMLFechar);
+  corForm.RetanguloMouseLeave(rctTopFechar);
 end;
 
-procedure TformularioPadrao.rctTopXMLFecharMouseMove(Sender: TObject;
+procedure TformularioPadrao.rctTopFecharMouseMove(Sender: TObject;
   Shift: TShiftState; X, Y: Single);
 begin
-  corForm.RetanguloMouseMove(rctTopXMLFechar, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctTopFechar, frmMenuPrincipal);
 end;
 
 end.

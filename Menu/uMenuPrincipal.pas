@@ -14,8 +14,6 @@ type
     lyt1Top: TLayout;
     lyt2SideLeft: TLayout;
     lyt3Client: TLayout;
-    rctClient: TRectangle;
-    rctshdMain: TShadowEffect;
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -50,8 +48,6 @@ begin
 
   FreeAndNil(frmLogin);
   onLogin := '';
-  //chama método para pegar a cor do frmMenuPrincipal e colocar no retangulo rctClent
-  corForm.RetanguloMouseMove(rctClient, frmMenuPrincipal);
 end;
 
 procedure TfrmMenuPrincipal.FormShow(Sender: TObject);

@@ -16,18 +16,18 @@ type
     crImagem: TCircle;
     lytLogOff: TLayout;
     rctLogOff: TRectangle;
-    imgLogOff: TImage;
     sdLogOff: TShadowEffect;
     fltLogOff1: TFloatAnimation;
     fltLogOff2: TFloatAnimation;
     Label1: TLabel;
+    PathLogOff: TPath;
     lytTopSair: TLayout;
     rctTopSair: TRectangle;
-    imgTopSair: TImage;
     sdwTopSair: TShadowEffect;
-    fltAnimeSair3: TFloatAnimation;
-    fltAnimeSair4: TFloatAnimation;
+    TopSairAnime1: TFloatAnimation;
+    TopSairAnime2: TFloatAnimation;
     lbTopSair: TLabel;
+    PathSair: TPath;
 
     procedure rctTopSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

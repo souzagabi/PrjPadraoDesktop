@@ -16,27 +16,26 @@ type
     crImagem: TCircle;
     lytLogOff: TLayout;
     rctLogOff: TRectangle;
-    imgLogOff: TImage;
     sdLogOff: TShadowEffect;
     fltLogOff1: TFloatAnimation;
     fltLogOff2: TFloatAnimation;
     Label1: TLabel;
     lytTopSair: TLayout;
     rctTopSair: TRectangle;
-    imgTopSair: TImage;
     sdwTopSair: TShadowEffect;
     TopSairAnime1: TFloatAnimation;
     TopSairAnime2: TFloatAnimation;
     lbTopSair: TLabel;
+    PathSair: TPath;
+    PathLogOff: TPath;
     procedure FormCreate(Sender: TObject);
     procedure rctTopSairClick(Sender: TObject);
     procedure rctLogOffClick(Sender: TObject);
-    procedure rctLogOffMouseLeave(Sender: TObject);
-    procedure rctLogOffMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Single);
-    procedure rctTopSairMouseLeave(Sender: TObject);
-    procedure rctTopSairMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Single);
+
+    procedure ChangeMouseLeave(Sender: TObject);
+    procedure ChangeMouseMove(Sender: TObject;
+      Shift: TShiftState; X, Y: Single);
+
   private
     { Private declarations }
   public
@@ -70,31 +69,30 @@ begin
   frmMenuPrincipal.Visible := true;
 end;
 
-procedure TfrmBarraMenu.rctLogOffMouseLeave(Sender: TObject);
-begin
-  corForm.RetanguloMouseLeave(rctLogOff);
-end;
-
-procedure TfrmBarraMenu.rctLogOffMouseMove(Sender: TObject; Shift: TShiftState;
-  X, Y: Single);
-begin
-  corForm.RetanguloMouseMove(rctLogOff, frmMenuPrincipal);
-end;
-
 procedure TfrmBarraMenu.rctTopSairClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
-procedure TfrmBarraMenu.rctTopSairMouseLeave(Sender: TObject);
+{$Region 'Início enventos Move e Leave dos botões'}
+//****************************************************************************\\
+//                     Inicio Eventos Move e Leave do Botões                  \\
+//****************************************************************************\\
+procedure TfrmBarraMenu.ChangeMouseLeave(Sender: TObject);
+var componente : TRectangle;
 begin
-  corForm.RetanguloMouseLeave(rctTopSair);
+  componente := TRectangle(Sender);
+  corForm.RetanguloMouseLeave(componente);
 end;
 
-procedure TfrmBarraMenu.rctTopSairMouseMove(Sender: TObject; Shift: TShiftState;
-  X, Y: Single);
+procedure TfrmBarraMenu.ChangeMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Single);
+var componente : TRectangle;
 begin
-  corForm.RetanguloMouseMove(rctTopSair, frmMenuPrincipal);
+  componente := TRectangle(Sender);
+  corForm.RetanguloMouseMove(componente, frmMenuPrincipal);
 end;
+
+{$EndRegion}
 
 end.

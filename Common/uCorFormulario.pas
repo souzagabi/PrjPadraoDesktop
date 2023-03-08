@@ -45,15 +45,33 @@ implementation
 {$region 'Médotos que mostra e esconde layout'}
 
 procedure TCorFormulario.ShowHiddenForm(layout: TLayout);
+var
+  layoutPai : TLayout;
 begin
-  if (layout.Visible = True) then
+  layout.Visible := not layout.Visible;
+  layoutPai := TLayout(layout.Parent);
+
+  if (layout.Visible = False) then
   begin
-    layout.Visible := False;
+    if (layout.Parent.Name = 'l01Pessoa') OR (layout.Parent.Name = 'l02Produto')  OR (layout.Parent.Name = 'l03Movimento')
+         OR (layout.Parent.Name = 'l04Financeiro') OR (layout.Parent.Name = 'l05Oficina') then
+    begin
+      layoutPai.Height := 45;
+    end;
   end
   else
   begin
-    layout.Visible := True;
+    if (layout.Parent.Name = 'l01Pessoa') OR (layout.Parent.Name = 'l02Produto')  OR (layout.Parent.Name = 'l03Movimento')
+         OR (layout.Parent.Name = 'l04Financeiro')then
+    begin
+      layoutPai.Height := 222;
+    end;
+    if (layout.Parent.Name = 'l05Oficina')  then
+    begin
+      layoutPai.Height := 285;
+    end;
   end;
+
 end;
 {$EndRegion}
 

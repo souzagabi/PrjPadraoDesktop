@@ -233,6 +233,9 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>IconesVáriosTamanhos.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>..\Img\logo44x44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>..\Img\logo150x150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -256,30 +259,54 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Menu\uMenuPrincipal.pas">
+        <DCCReference Include="..\PrjOficina\Menu\uMenuPrincipal.pas">
             <Form>frmMenuPrincipal</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Common\uCorFormulario.pas"/>
-        <DCCReference Include="Modelo\uFormularioPadrao.pas">
+        <DCCReference Include="..\PrjOficina\Common\uCorFormulario.pas"/>
+        <DCCReference Include="..\PrjOficina\Modelo\uFormularioPadrao.pas">
             <Form>formularioPadrao</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Common\uGerenciador.Form.pas"/>
-        <DCCReference Include="Menu\ufrmBarraTop.pas">
+        <DCCReference Include="..\PrjOficina\Common\uGerenciador.Form.pas"/>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmBarraTop.pas">
             <Form>frmBarraTop</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Menu\ufrmLeft.pas">
+        <DCCReference Include="..\PrjOficina\Menu\ufrmLeft.pas">
             <Form>frmLeft</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Forms\ufrmLogin.pas">
+        <DCCReference Include="..\PrjOficina\Forms\ufrmLogin.pas">
             <Form>frmLogin</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Menu\ufrmMultiView.pas">
+        <DCCReference Include="..\PrjOficina\Menu\ufrmMultiView.pas">
             <Form>frmBarraMenu</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmConteudoPessoa.pas">
+            <Form>frmConteudoPessoa</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmConteudoProduto.pas">
+            <Form>frmConteudoProduto</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmConteudoMovimento.pas">
+            <Form>frmConteudoMovimento</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmConteudoFinanceiro.pas">
+            <Form>frmConteudoFinanceiro</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Menu\ufrmConteudoOficina.pas">
+            <Form>frmConteudoOficina</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\PrjOficina\Forms\ufrmConsultaPessoa.pas">
+            <Form>frmConsultaPessoa</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -330,6 +357,20 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Img\logo44x44.png" Configuration="Debug" Class="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets\</RemoteDir>
+                        <RemoteName>Logo44x44.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Img\logo150x150.png" Configuration="Debug" Class="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets\</RemoteDir>
+                        <RemoteName>Logo150x150.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
