@@ -1,0 +1,65 @@
+unit ufrmConteudoOficina;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.Ani, FMX.Effects, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TfrmConteudoOficina = class(TForm)
+    lytMain: TLayout;
+    rctContent: TRectangle;
+    lyt10ConteudoOficina: TLayout;
+    rctConteudoOficina: TRectangle;
+    lyt01CadVeiculo: TLayout;
+    rctCadVeiculo: TRectangle;
+    lblCadVeiculo: TLabel;
+    sdwCadVeiculo: TShadowEffect;
+    fltCadVeiculo1: TFloatAnimation;
+    fltCadVeiculo2: TFloatAnimation;
+    PathCadVeiculo: TPath;
+    lyt02ConVeiculo: TLayout;
+    rctConVeiculo: TRectangle;
+    lblConVeiculo: TLabel;
+    sdwConVeiculo: TShadowEffect;
+    fltConVeiculo1: TFloatAnimation;
+    fltConVeiculo2: TFloatAnimation;
+    PathConVeiculo: TPath;
+    lyt03CadOrdemServico: TLayout;
+    rctCadOrdemServico: TRectangle;
+    lblCadOrdemServico: TLabel;
+    sdwCadOrdemServico: TShadowEffect;
+    fltCadOrdemServico1: TFloatAnimation;
+    fltCadOrdemServico2: TFloatAnimation;
+    PathCadOrdemServico: TPath;
+    lyt04ConOrdemServico: TLayout;
+    rctConOrdemServico: TRectangle;
+    lblConOrdemServico: TLabel;
+    sdwConOrdemServico: TShadowEffect;
+    fltConOrdemServico1: TFloatAnimation;
+    fltConOrdemServico2: TFloatAnimation;
+    PathConOrdemServico: TPath;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConteudoOficina: TfrmConteudoOficina;
+
+implementation
+
+{$R *.fmx}
+
+uses uCorFormulario, uMenuPrincipal;
+
+procedure TfrmConteudoOficina.FormCreate(Sender: TObject);
+begin
+  corForm.RetanguloMouseMove(rctContent, frmMenuPrincipal);
+end;
+
+end.

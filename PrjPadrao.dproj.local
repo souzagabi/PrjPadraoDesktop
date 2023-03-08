@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/08 15:36:38.000.483,=C:\Users\Gabriel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 15:42:16.000.948,C:\Users\Gabriel\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\uMenuPrincipal.pas</Transaction>
+    <Transaction>2023/02/08 15:42:16.000.948,C:\Users\Gabriel\Documents\Embarcadero\Studio\Projects\Unit1.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\uMenuPrincipal.fmx</Transaction>
+    <Transaction>2023/02/08 15:42:25.000.612,C:\Users\Gabriel\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Projetos\ProjetoDelphi\PrjOficina\PrjOficina.dproj</Transaction>
+    <Transaction>2023/02/08 16:36:13.000.411,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 16:37:07.000.575,D:\Projetos\ProjetoDelphi\PrjOficina\ufrmBarraTop.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/02/08 16:37:07.000.575,D:\Projetos\ProjetoDelphi\PrjOficina\ufrmBarraTop.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 16:49:21.000.300,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 16:50:52.000.195,D:\Projetos\ProjetoDelphi\PrjOficina\Common\uCorFormulario.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 17:11:07.000.012,=D:\Projetos\ProjetoDelphi\PrjOficina\Modelo\uFormularioPadrao.pas</Transaction>
+    <Transaction>2023/02/08 17:27:06.000.938,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 17:27:34.000.904,D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Common\uGerenciador.Form.pas</Transaction>
+    <Transaction>2023/02/08 17:28:55.000.011,=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmBarraTop.pas</Transaction>
+    <Transaction>2023/02/10 09:43:49.000.971,=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmLeft.pas</Transaction>
+    <Transaction>2023/02/10 11:15:47.000.858,=D:\Projetos\ProjetoDelphi\PrjOficina\Forms\ufrmLogin.pas</Transaction>
+    <Transaction>2023/02/10 14:31:54.000.203,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/02/10 14:33:14.000.187,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmMultiView.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/02/10 14:33:14.000.187,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmMultiView.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/07 16:38:29.000.154,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/07 16:39:12.000.668,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoPessoa.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/03/07 16:39:12.000.668,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoPessoa.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/07 17:07:33.000.318,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/07 17:08:32.000.031,D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoProduto.fmx</Transaction>
+    <Transaction>2023/03/07 17:08:32.000.031,D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoProduto.pas</Transaction>
+    <Transaction>2023/03/07 17:39:00.000.646,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/07 17:39:35.000.435,D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoMovimento.pas</Transaction>
+    <Transaction>2023/03/07 17:39:35.000.435,D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoMovimento.fmx</Transaction>
+    <Transaction>2023/03/08 07:45:04.869,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 07:46:51.293,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoFinanceiro.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/03/08 07:46:51.293,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoFinanceiro.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 08:15:09.388,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 08:17:45.804,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoOficina.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 08:17:45.804,D:\Projetos\ProjetoDelphi\PrjOficina\Menu\ufrmConteudoOficina.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/03/08 14:11:21.160,=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 14:14:05.952,D:\Projetos\ProjetoDelphi\PrjOficina\Forms\ufrmConsultaPessoa.fmx=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.fmx</Transaction>
+    <Transaction>2023/03/08 14:14:05.952,D:\Projetos\ProjetoDelphi\PrjOficina\Forms\ufrmConsultaPessoa.pas=D:\Projetos\ProjetoDelphi\PrjOficina\Unit1.pas</Transaction>
+    <Transaction>2023/03/08 14:16:04.061,D:\Projetos\ProjetoDelphi\PrjPadraoDesktop\PrjPadrao.dproj=D:\Projetos\ProjetoDelphi\PrjOficina\PrjOficina.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

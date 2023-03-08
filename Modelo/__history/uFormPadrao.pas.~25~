@@ -1,0 +1,94 @@
+unit uFormPadrao;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Ani, FMX.Effects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.TabControl,
+  FMX.Layouts, uCorFormulario, uMenuPrincipal;
+
+type
+  TFrmPadrao = class(TForm)
+    lytMain: TLayout;
+    tbXMLControle: TTabControl;
+    tbItemXML: TTabItem;
+    lytTopXML: TLayout;
+    rctTopXML: TRectangle;
+    rctTopXMLFechar: TRectangle;
+    lbTopXMLFechar: TLabel;
+    ShadowEffect1: TShadowEffect;
+    FloatAnimation1: TFloatAnimation;
+    FloatAnimation2: TFloatAnimation;
+    imgTopXMLFechar: TImage;
+    rctTbXMLControle: TRectangle;
+    rctMessage: TRectangle;
+    lbMessage: TLabel;
+    procedure rctTopXMLFecharClick(Sender: TObject);
+    procedure rctTopXMLFecharMouseLeave(Sender: TObject);
+    procedure rctTopXMLFecharMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Single);
+
+  private
+    { Private declarations }
+    procedure LimparMessage;
+    procedure CarregarMessage(corFundo, corFonte: integer; msg: string);
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPadrao: TFrmPadrao;
+  menuPrincipal: TfrmMenuPrincipal;
+  corFormulario : TCorFormulario;
+
+implementation
+
+
+{$R *.fmx}
+
+
+procedure TFrmPadrao.rctTopXMLFecharClick(Sender: TObject);
+begin
+  tbXMLControle.Visible := False;
+  corForm.RetanguloMouseMove(frmMenuPrincipal.rctMenuPrincipal, frmMenuPrincipal);
+  Self.Free;
+end;
+
+procedure TFrmPadrao.rctTopXMLFecharMouseLeave(Sender: TObject);
+begin
+  corForm.RetanguloMouseLeave(rctTopXMLFechar);
+end;
+
+procedure TFrmPadrao.rctTopXMLFecharMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Single);
+begin
+  corForm.RetanguloMouseMove(rctTopXMLFechar, frmMenuPrincipal);
+end;
+
+
+{$Region 'Mensagens Carregar/Limpar'}
+//****************************************************************************\\
+//                                 Inicio Mensagens                           \\
+//****************************************************************************\\
+procedure TFrmPadrao.LimparMessage;
+begin
+  rctMessage.Visible := False;
+  lbMessage.Visible  := False;
+end;
+
+procedure TFrmPadrao.CarregarMessage(corFundo, corFonte: integer; msg: string);
+begin
+  rctMessage.Fill.Kind    := TBrushKind.Solid;
+  rctMessage.Fill.Color   := TAlphaColor(corFundo);
+  rctMessage.Visible      := True;
+  lbMessage.FontColor     :=  TAlphaColor(corFonte);
+  lbMessage.Text          := msg;
+  lbMessage.Visible       := True;
+  rctMessage.Stroke.Kind  := TBrushKind.Solid;
+  rctMessage.Stroke.Color := TAlphaColor(corFonte);
+end;
+
+{$EndRegion}
+
+end.

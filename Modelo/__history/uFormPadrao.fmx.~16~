@@ -1,0 +1,272 @@
+object FrmPadrao: TFrmPadrao
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 1200
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lytMain: TLayout
+    Align = Client
+    Size.Width = 1200.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object tbXMLControle: TTabControl
+      Align = Client
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 1180.000000000000000000
+      Size.Height = 460.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 0
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      Sizes = (
+        1180s
+        437s)
+      object tbItemXML: TTabItem
+        CustomIcon.Height = 50
+        CustomIcon.Width = 50
+        CustomIcon.TransparentColor = -16777194
+        CustomIcon = <
+          item
+            Width = 50
+            Height = 50
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000320000003208060000001E3F88
+              B1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              06E2494441546843ED99CB4FD45714C7E5350F6010290C9442850221085A1E29
+              AF5605C1456BD3DA461A9B74D1FFA09B76E5C2B870D5AEFA1774D1A42698D436
+              151660C18A0FA8801D418348914228E00B87C7CC3003F4F3859F88CDB8E037E9
+              C4EA9CE4E4DC7BCFB997F3BDE7DC7BCFFCD816A10845E8E5A028433E45ABABAB
+              51ADADAD96A4A4244B4C4C4CBCCD66B3FBFDFE68DAD186495868797979252E2E
+              6EC5EBF57A1C0EC702434BC5C5C5FEA8A8A8D5758B271414484B4B8B353535D5
+              191D1DFD1A93F6ACACACEC826DB1B1B156C3242CC4867AF9FB5EE40DD8054FC6
+              C7C74F9794942C19261B1414485757978328140B04930FC27B97969612AD566B
+              826112162222F364C13CCD0BB4DBD84C1791190488C69EA2A0A9A27412089A8D
+              2C502810F7EFDFB7AC6BC347D3D3D3569FCFE7004021D9D1489AED999B9B0BBA
+              994123D2DFDF9FC3E42F88C4512D343131119F9797E7E59CF80C93B0108E5B47
+              46466C5959598B6CACDB62B19C6293BF2D2B2BBB63986C5050203D3D3D6FB003
+              5F118DCFB42B99999901809D43757EDD226CB41F3F1A88420C67630910DFE3C7
+              D79595957F1AFA0D0A0AA4B7B7371F718C887CAE3E91986591932CF08DFAE122
+              36F44B36F3189149569FA87C8738595151715BFDCD14D6EBF4BFA40890D1D151
+              9BCBE5DAD1D7D7F7E6D5AB570F236B2F5EBCE8BC75EB9695947CE6BAC78F1F8F
+              1E1818B030279514AED1DCEEEEEE52F8954B972ED90DB32D9369201C403B375A
+              0A4E97D3FD8443B88F1C4E77BBDDB6CECECE67AE5B5757173D3B3B6BE5103B99
+              B3176EA25DC1194CD3B56F986D994C03595C5C7C1DC7F702A4926E110E557128
+              DFE3705653DA38B5EB9B23A3B6C6A4E306AAC6FE10C35580284256A27F1B992D
+              5B33641A08BB97C31F6FA45905E701EA2DF863CA987DF433D15B3747466D8DD1
+              CC645E1DF208ACB9F99ACBD801AD49DF149906C24ECE2054FF8CC26E226181B3
+              D8E932B8617E7EBEDA6EB76728EF759E1409A2A89DAF874B654BC56045CE613F
+              061817526B9A22D3407066981DFC0507AEE0C004D21F0804B6A3527D76187990
+              54CBE6354E98999949007816630DF087F06E402553BB0598F737BA6EE69C259A
+              C3E84C91692014956E9C19C7816B38720E50D770FA218ED9E8E72015997D7023
+              0EAA66DB0F97639FC32561A7F87B60CC6D675C723C3131D16D2CBF65320DA4B9
+              B939C08BEFC181419CFD91A14E9C1FC329D5632AEC0AE177D11FC5E14F69EB22
+              28C2C6013095E163E83AE89F66FC3AB7E0424141819F7153641AC889132756EA
+              EBEB03A4C73DF27F0887FA0074013900C08798E82ACDC7499D8752C014906A89
+              4837D11B44D7C5781F37D810F3EF6A2DE6AE686D33641AC863E2175B606A6ACA
+              43F3268E2A32ED383A82F4E05822E99726A6EDE070FB00328AEE57F80CF63735
+              576BD00F894206A25DD46EF2103EC0B1DBA4CB18C38F703840BAC47116E2C58C
+              A18E5B36747F016EC4E3F13C0835128F296420CF0B850C84DD8DEEE8E88825CF
+              53381BF99C939D0C6F67976389849FA82C8A1943ED8F3174AF7336F278675234
+              576B68AD5028E4050607076333323254EC15E1E847485DB579483B0ECEE3F05D
+              31ED39AE672B2072D11D800F635FA4B95A837E48641A88AA58ED266F422AE7A3
+              1047CB391FAABD4A380B3B3051146EEB7D11036018C7E79149002D46F70EE3E5
+              9C9542E6A7851A19D3139B9A9A6271D84E2A15034091A8C3919D38A77A4ADFA0
+              86E056F4A770FE07DA2DE86E2A325400FA90B1139DCA95238CEF260D13868787
+              E3183745A68178BDDE2452261B274B71A8416F05D7EB0E1CF3D2BF83EC07E06F
+              703B8EEB4A3E0FF7617F87B7C7C3B94931E636322E994D7D96642CBF65320D04
+              270A70FE7D1CAEC6D92C641C2FF623542E7467906DA4D238E0169C4EE7028E4E
+              30A60F183FC1D7D98459D252E9F42ABA2AE61C0270013A53641A087FDC89D883
+              03B97012BBAAAF1C13805224CE51375DE19D98AAADADF5E4E6E67A39073338DF
+              83ADCA129D9B090EBF0FE9C05E37DD6EC6D3D6163741A100D1C3D701F7C0FAAA
+              D10D9FC6994EE424D1F2F16B70E3A1535B6334270D9BD3B0E668AED6E830D634
+              45A68140AA7CBBE0DFE11BF4BBD9D9B3DC4257B4FBFA3E8BC31B40D4D69874B2
+              912DC32ADFF55D576B74D11F5F333641A681B0BB8BFCF17BEC622FDD661CBB40
+              7B263939D9C7AFC167961CD2C946B69AC350B3D6D05A5A73DD6AEB14F940F7BC
+              D10B03E4C5FE88FDC2FC5BE1F2E5CBE92CF201CD83002A04409EFED143644CD7
+              426688482CE1BC1FD6E1D6CFE9767CF9B9A6A6667ADDE209053D2314700B44C3
+              456AB511DA216AA3B9F4F4F4B04643A474522468AA006DC3A73FE4DB9AF25F14
+              3422FAB4C9A395CE2299B0CA905D2C6243DA0C93B0107FD38B58FB1E20104466
+              92D45A7B6CD70C365150204C8AE2C78ED2C8427813FE0FFF9E8E508422F452D0
+              B66DFF000EAD42BBB36808D10000000049454E44AE426082}
+            FileName = 
+              'D:\ADJClientes\ProjetosDelphi\PrjMenuLayout\img\icons8-close-win' +
+              'dow-24.png'
+          end>
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.HorzAlign = Leading
+        StyledSettings = [Style, FontColor]
+        IsSelected = True
+        Size.Width = 82.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'tabitemcustom'
+        TabOrder = 0
+        Text = 'Padr'#227'o'
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object lyt1TopXML: TLayout
+          Align = Top
+          Size.Width = 1180.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object rctTopXML: TRectangle
+            Align = Client
+            Fill.Kind = Gradient
+            Fill.Gradient.Points = <
+              item
+                Color = xFF167897
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFFB3DDE2
+                Offset = 1.000000000000000000
+              end>
+            Fill.Gradient.StartPosition.X = 0.500000000000000000
+            Fill.Gradient.StopPosition.X = 0.499999970197677600
+            Size.Width = 1180.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 0.000000000000000000
+            object rctTopXMLFechar: TRectangle
+              Align = Right
+              Fill.Kind = None
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 20.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.X = 1045.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 115.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 0.000000000000000000
+              OnClick = rctTopXMLFecharClick
+              OnMouseMove = rctTopXMLFecharMouseMove
+              OnMouseLeave = rctTopXMLFecharMouseLeave
+              object lbTopXMLFechar: TLabel
+                Align = Left
+                StyledSettings = []
+                Size.Width = 73.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Fechar'
+                TabOrder = 0
+              end
+              object ShadowEffect1: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+              object fltTopXMLFechar1: TFloatAnimation
+                Duration = 0.100000001490116100
+                PropertyName = 'Size.Height'
+                StartValue = 40.000000000000000000
+                StopValue = 50.000000000000000000
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object fltTopXMLFechar2: TFloatAnimation
+                Duration = 0.100000001490116100
+                PropertyName = 'Size.Width'
+                StartValue = 115.000000000000000000
+                StopValue = 125.000000000000000000
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object imgTopXMLFechar: TImage
+                MultiResBitmap.Height = 50
+                MultiResBitmap.Width = 50
+                MultiResBitmap = <
+                  item
+                    Width = 50
+                    Height = 50
+                    PNG = {
+                      89504E470D0A1A0A0000000D49484452000000320000003208060000001E3F88
+                      B1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      01FA494441546843EDD85F4EC240100670EA139C44637CD35B88F12C7A0543E2
+                      934FEA6DFC7300CF61F4D5B6044800E783AF9B929271B65D6525FB7BE996CEAC
+                      F3D906D05E9224ED2C168BCBE572F99AE77921C79DC20CF3F9FC4566BAE07836
+                      D27BBBDE223E1268C43175BC13519319871CD739E0D1C9B2EC8ACB6849966B2E
+                      9D4690B22C4FB98CD6643239E3D2C9787470EBB88C9A3C391BB337EEC87F9582
+                      C42605894DE720F2E1F4389BCD3E79EA0DBDD883A7E1E0EDD74ABE2EDCA34706
+                      399E4EA71F7CD90C3DE8C51ED88B2F9BA047C53A131904BFCD13F4C9F150CEDF
+                      79E947F55E393DF2E905F4A95867D6264CD710805E15EBBCF884091102D0AF62
+                      9D374B985021007BA858D78A16266408C03E2AD6B5B62D4CE81080BD54ACEB44
+                      06756FAB38D6D7B8C6B24EB09F8A759DD5EF02C84B41EE4485DB3A7FF61565DB
+                      0FFF55ABB81DEDC5A3557FA4E474F538D55F93A3E943F327D84BC5BA56B68558
+                      5FD9BC16220CF651B1CE9B16A212320CF650B1CE8B2544255418F4AB5867E613
+                      A212220C7A55AC336913A2D2350CFA54AC33D99B3FAC4006786813A2825EECC1
+                      53338EEBA4FF34C62605894D0A129B4690B22C0B2EA3351E8FBFB8741A410683
+                      C11B97D1EAF7FB8D191B41E4EDF98ECB689967944FDAD1EAE3334232DB0DC7B4
+                      91EF4043697A2E8A22E71E3B831964962799E99CE32549E2A5D7FB063CE13975
+                      54D717030000000049454E44AE426082}
+                    FileName = 'D:\ADJClientes\ProjetosDelphi\PrjMenuLayout\img\fechar.png'
+                  end>
+                Align = Right
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 72.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 38.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+          end
+        end
+        object rctTbXMLControle: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Size.Width = 1180.000000000000000000
+          Size.Height = 377.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object rctMessage: TRectangle
+            Align = Top
+            Fill.Kind = None
+            Margins.Top = 50.000000000000000000
+            Size.Width = 1054.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            Visible = False
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object lbMessage: TLabel
+              Align = Client
+              StyledSettings = []
+              Size.Width = 1054.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claNull
+              TextSettings.HorzAlign = Center
+              Text = 'lbMessage'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+  end
+end

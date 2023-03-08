@@ -1,0 +1,258 @@
+unit ufrmLogin;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FireDAC.UI.Intf, FireDAC.FMXUI.Wait, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FMX.Effects, FMX.Ani,
+  FMX.Edit, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Layouts,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Comp.UI,
+  FireDAC.Phys.FBDef, FireDAC.Phys, FireDAC.Phys.IBBase, FireDAC.Phys.FB;
+
+type
+  TfrmLogin = class(TForm)
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDQryLogin: TFDQuery;
+    lytMain: TLayout;
+    rctLogin: TRectangle;
+    lyt1TopLogin: TLayout;
+    rctTopLogin: TRectangle;
+    Label1: TLabel;
+    lyt2ContentLogin: TLayout;
+    lytCampoLogin: TLayout;
+    lbCampoLogin: TLabel;
+    lytCLogin: TLayout;
+    edLogin: TEdit;
+    lytCampoSenha: TLayout;
+    lbCampoSenha: TLabel;
+    lytCSenha: TLayout;
+    edSenha: TEdit;
+    lytCampoEmpresa: TLayout;
+    lbCampoEmpresa: TLabel;
+    lytCEmpresa: TLayout;
+    edEmpresa: TEdit;
+    lyt3BottomLogin: TLayout;
+    rctBottomLogin: TRectangle;
+    lyt1Confirmar: TLayout;
+    rctConfirmar: TRectangle;
+    lbConfirmar: TLabel;
+    fltConfirmar1: TFloatAnimation;
+    fltConfirmar2: TFloatAnimation;
+    sdConfirmar: TShadowEffect;
+    lyt2Cancelar: TLayout;
+    rctCancelar: TRectangle;
+    lbCancelar: TLabel;
+    fltCancelar1: TFloatAnimation;
+    fltCancelar2: TFloatAnimation;
+    sdCancelar: TShadowEffect;
+    FDPhysFBDriverLink1: TFDPhysFBDriverLink;
+    FDQryEmpresa: TFDQuery;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+
+    procedure edEmpresaKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure edLoginKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure edSenhaKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+
+    procedure rctConfirmarMouseLeave(Sender: TObject);
+    procedure rctConfirmarMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Single);
+    procedure rctConfirmarClick(Sender: TObject);
+
+    procedure rctCancelarClick(Sender: TObject);
+    procedure rctCancelarMouseLeave(Sender: TObject);
+    procedure rctCancelarMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Single);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.fmx}
+
+uses uCorFormulario, uMenuPrincipal;
+
+{$Region 'Iniciando o Login'}
+procedure TfrmLogin.FormCreate(Sender: TObject);
+begin
+  corForm.RetanguloMouseMove(rctTopLogin, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctLogin, frmMenuPrincipal);
+
+end;
+
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+  edEmpresa.SetFocus;
+  corForm.RetanguloMouseMove(rctTopLogin, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctLogin, frmMenuPrincipal);
+  corForm.RetanguloMouseMove(rctBottomLogin, frmMenuPrincipal);
+end;
+{$EndRegion}
+
+{$Region 'Verificando Campos'}
+procedure TfrmLogin.edEmpresaKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = 13 then
+  begin
+    Key := 0;
+    edLogin.SetFocus;
+  end;
+end;
+
+procedure TfrmLogin.edLoginKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = 13 then
+  begin
+    Key := 0;
+    edSenha.SetFocus;
+  end;
+end;
+
+procedure TfrmLogin.edSenhaKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = 13 then
+  begin
+    Key := 0;
+    rctConfirmarClick(Self);
+  end;
+end;
+
+{$EndRegion}
+
+{$Region 'Confirmando Login'}
+procedure TfrmLogin.rctConfirmarClick(Sender: TObject);
+var
+  empresa, dbCodEmpresa, pessoa_id, login, senha, nome, dbSenha : string;
+
+begin
+  if Length(Trim(edEmpresa.Text)) > 0 then
+  begin
+    empresa := edEmpresa.Text;
+  end;
+  if Length(Trim(edLogin.Text)) > 0 then
+  begin
+    login   := edLogin.Text;
+  end;
+  if Length(Trim(edSenha.Text)) > 0 then
+  begin
+    senha   := edSenha.Text;
+  end;
+
+  try
+    {FDQryEmpresa.Close;
+    FDQryEmpresa.ParamByName('EMPRESA').AsString := empresa;
+    FDQryEmpresa.Open;
+    FDQryEmpresa.First;}
+
+
+    //if FDQryEmpresa.RecordCount > 0 then
+    if Length(empresa) > 0 then
+    begin
+      {While Not FDQryEmpresa.Eof Do
+      begin
+        pessoa_id := FDQryEmpresa.FieldByName('PESSOA_ID').AsString;
+        dbCodEmpresa := FDQryEmpresa.FieldByName('CODIGOACESSO').AsString;
+
+        FDQryEmpresa.Next;
+      end; }
+
+      {FDQryLogin.Close;
+      FDQryLogin.ParamByName('PESSOA_ID').AsString := pessoa_id;
+      FDQryLogin.ParamByName('LOGIN').AsString := login;
+      FDQryLogin.Open;
+      FDQryLogin.First;
+
+      While Not FDQryLogin.Eof Do
+      begin
+        nome := FDQryLogin.FieldByName('LOGIN').AsString;
+        dbSenha := FDQryLogin.FieldByName('SENHA').AsString;
+
+        FDQryLogin.Next;
+      end; }
+      nome := login;
+      dbSenha := senha;
+      if nome = edLogin.Text then
+      begin
+        if (dbSenha = senha) then
+        begin
+           ModalResult:= mrok;
+        end
+        else
+        begin
+          {edSenha.Text := '';
+          edSenha.SetFocus; }
+          raise Exception.Create( 'Senha inválida! Tenta novamene.' );
+        end;
+      end
+      else
+      begin
+        {edLogin.Text := '';
+        edLogin.SetFocus;}
+        raise Exception.Create( 'Login inválido! Tenta novamene.');
+      end;
+    end
+    else
+    begin
+        edEmpresa.Text := '';
+        edEmpresa.SetFocus;
+
+        raise Exception.Create('Código da Empresa está inválido! Tente novemente');
+    end;
+
+  Except
+  on E : Exception do
+    begin
+      raise Exception.Create('Erro ao conectar no banco de dados! Comunique ao suporte tecnico. ' + E.Message );
+    end;
+  end;
+
+end;
+
+procedure TfrmLogin.rctConfirmarMouseLeave(Sender: TObject);
+begin
+  corForm.RetanguloMouseLeave(rctConfirmar);
+end;
+
+procedure TfrmLogin.rctConfirmarMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: Single);
+begin
+  corForm.RetanguloMouseMove(rctConfirmar, frmMenuPrincipal);
+end;
+
+{$EndRegion}
+
+{$Region 'Cancelando Login'}
+procedure TfrmLogin.rctCancelarClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmLogin.rctCancelarMouseLeave(Sender: TObject);
+begin
+  corForm.RetanguloMouseLeave(rctCancelar);
+end;
+
+procedure TfrmLogin.rctCancelarMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Single);
+begin
+  corForm.RetanguloMouseMove(rctCancelar, frmMenuPrincipal);
+end;
+
+{$EndRegion}
+
+end.

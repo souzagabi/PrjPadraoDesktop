@@ -1,0 +1,47 @@
+unit uGerenciador.Form;
+
+interface
+uses
+  System.Generics.Collections,
+  System.Classes,
+  System.Rtti,
+  System.SysUtils,
+  System.UITypes,
+  FMX.Layouts,
+  FMX.Forms,
+  FMX.TabControl,
+  FMX.Objects,
+  FMX.Types;
+
+Type
+  iGerenciadorForm = interface
+    ['{148993BE-07DA-48DA-9525-4757017B89E5}']
+    function AddForm(Key: String; Value : TComponentClass; const Parent : TLayout; Index : Boolean = false) : iGerenciadorForm;
+    function GetForm(Value: String): TForm;
+    function GetFormIndex : TForm;
+    function RemoveForm(Value: String ) : iGerenciadorForm;
+
+  end;
+
+  TGerenciadorForm = class(TinterfacedObject, iGerenciadorForm)
+    private
+      FormIndex : TForm;
+      ListaForm : TObjectDictionary<String, TForm>;
+
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iGerenciadorForm;
+
+      function AddForm(Key: String; Value : TComponentClass; const Parent : TLayout; Index : Boolean = false) : iGerenciadorForm;
+      function GetForm(Value: String): TForm;
+      function GetFormIndex : TForm;
+      function RemoveForm(Value: String ) : iGerenciadorForm;
+
+  end;
+
+var
+  _Gerenciador : iGerenciadorForm;
+implementation
+
+end.

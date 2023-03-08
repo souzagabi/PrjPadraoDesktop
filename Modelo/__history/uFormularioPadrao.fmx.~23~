@@ -1,0 +1,231 @@
+object formularioPadrao: TformularioPadrao
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 580
+  ClientWidth = 1200
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lytMain: TLayout
+    Align = Contents
+    Size.Width = 1200.000000000000000000
+    Size.Height = 580.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctControle: TRectangle
+      Align = Contents
+      Fill.Kind = None
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 1190.000000000000000000
+      Size.Height = 570.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object lyt1Top: TLayout
+        Align = Top
+        Size.Width = 1190.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object rctTop: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 1180.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 0.000000000000000000
+          object sdwTop: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object lytLabel: TLayout
+            Align = Left
+            Size.Width = 353.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lbPadrao: TLabel
+              Align = Client
+              StyledSettings = [Style]
+              Margins.Left = 10.000000000000000000
+              Size.Width = 343.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.FontColor = claWhite
+              Text = 'Texto Padr'#227'o'
+              TabOrder = 0
+            end
+          end
+          object lytTopFechar: TLayout
+            Align = Right
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 1070.000000000000000000
+            Position.Y = 10.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object rctTopFechar: TRectangle
+              Align = Right
+              Fill.Kind = None
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 20.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = -35.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 115.000000000000000000
+              Size.Height = 15.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Thickness = 0.000000000000000000
+              OnClick = rctTopFecharClick
+              OnMouseMove = rctTopFecharMouseMove
+              OnMouseLeave = rctTopFecharMouseLeave
+              object PathFechar: TPath
+                Align = Right
+                Data.Path = {
+                  3F0000000000000000002F4300002F43020000006666384333B3254302000000
+                  9A99474333B32543020000009A19504300002F43010000009A197F439A195E43
+                  010000000080974300002F430200000033339C4333B3254302000000CDCCA343
+                  33B3254302000000CD0CA84300002F43020000006626AD436666384302000000
+                  6626AD439A99474302000000CD0CA8439A1950430100000033F390439A197F43
+                  01000000CD0CA84300809743020000006626AD4333339C43020000006626AD43
+                  CDCCA34302000000CD0CA843CD0CA84302000000CDCCA3436626AD4302000000
+                  33339C436626AD430200000000809743CD0CA843010000009A197F4333F39043
+                  010000009A195043CD0CA843020000009A9947436626AD430200000066663843
+                  6626AD430200000000002F43CD0CA8430200000033B32543CDCCA34302000000
+                  33B3254333339C430200000000002F4300809743010000009A195E439A197F43
+                  0100000000002F439A1950430200000033B325439A9947430200000033B32543
+                  666638430200000000002F4300002F430100000000002F4300002F4303000000
+                  00002F4300002F43000000000000004400008043020000000000004433B3C643
+                  0200000033B3C64300000044020000000000804300000044020000003333E542
+                  00000044020000000000000033B3C64302000000000000000000804302000000
+                  000000003333E542020000003333E54200000000020000000000804300000000
+                  0200000033B3C6430000000002000000000000443333E5420200000000000044
+                  0000804303000000000000440000804300000000000080430000404202000000
+                  9A190D430000404202000000000040429A190D43020000000000404200008043
+                  02000000000040423373B943020000009A190D430000E8430200000000008043
+                  0000E843020000003373B9430000E843020000000000E8433373B94302000000
+                  0000E84300008043020000000000E8439A190D43020000003373B94300004042
+                  020000000000804300004042030000000000804300004042}
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Position.X = 75.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Width = 30.000000000000000000
+                Size.Height = 5.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+              end
+              object sdwTopFechar: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+              object TopFecharAnime1: TFloatAnimation
+                Duration = 0.100000001490116100
+                PropertyName = 'Size.Height'
+                StartValue = 35.000000000000000000
+                StopValue = 45.000000000000000000
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object TopFecharAnime2: TFloatAnimation
+                Duration = 0.100000001490116100
+                PropertyName = 'Size.Width'
+                StartValue = 100.000000000000000000
+                StopValue = 110.000000000000000000
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object lbTopFechar: TLabel
+                Align = Left
+                StyledSettings = []
+                Size.Width = 73.000000000000000000
+                Size.Height = 15.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Fechar'
+                TabOrder = 0
+              end
+            end
+          end
+        end
+      end
+      object lyt2Conteudo: TLayout
+        Align = Client
+        Size.Width = 1190.000000000000000000
+        Size.Height = 520.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object rctTbXMLControle: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 1180.000000000000000000
+          Size.Height = 510.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object rctMessage: TRectangle
+            Align = Top
+            Fill.Kind = None
+            Margins.Top = 50.000000000000000000
+            Size.Width = 1054.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            Visible = False
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object lbMessage: TLabel
+              Align = Client
+              StyledSettings = []
+              Size.Width = 1054.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claNull
+              TextSettings.HorzAlign = Center
+              Text = 'lbMessage'
+              TabOrder = 0
+            end
+          end
+          object ShadowEffect3: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+      end
+    end
+  end
+end

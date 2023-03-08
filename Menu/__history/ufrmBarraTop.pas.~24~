@@ -1,0 +1,114 @@
+unit ufrmBarraTop;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Ani, FMX.Objects, FMX.Effects,
+  FMX.Layouts;
+
+type
+  TfrmBarraTop = class(TForm)
+    lytMain: TLayout;
+    rctBarraTop: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    crImagem: TCircle;
+    lytTopSair: TLayout;
+    rctTopSair: TRectangle;
+    imgTopSair: TImage;
+    sdwTopSair: TShadowEffect;
+    fltAnimeSair3: TFloatAnimation;
+    fltAnimeSair4: TFloatAnimation;
+    lbTopSair: TLabel;
+    PathSair: TPath;
+    lytLogOff: TLayout;
+    rctLogOff: TRectangle;
+    imgLogOff: TImage;
+    sdLogOff: TShadowEffect;
+    fltLogOff1: TFloatAnimation;
+    fltLogOff2: TFloatAnimation;
+    Label1: TLabel;
+    PathLogOff: TPath;
+
+    procedure rctTopSairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure rctLogOffClick(Sender: TObject);
+
+    procedure ChangeMouseLeave(Sender: TObject);
+    procedure ChangeMouseMove(Sender: TObject;
+      Shift: TShiftState; X, Y: Single);
+  private
+
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBarraTop: TfrmBarraTop;
+
+implementation
+
+{$R *.fmx}
+
+uses uMenuPrincipal, uCorFormulario, ufrmLogin;
+
+{$Region 'LogOff'}
+//****************************************************************************\\
+//                         Inicio Botão LogOff Aplicação                      \\
+//****************************************************************************\\
+
+procedure TfrmBarraTop.rctLogOffClick(Sender: TObject);
+begin
+  frmMenuPrincipal.Visible := false;
+  frmLogin := TfrmLogin.Create(Self);
+  frmLogin.ShowModal;
+  if frmLogin.ModalResult <> mrok then
+  begin
+    Application.Terminate;
+  end;
+  onLogin := '1';
+  frmMenuPrincipal.Visible := true;
+end;
+
+{$EndRegion}
+
+{$Region 'Fechar'}
+//****************************************************************************\\
+//                         Inicio Botão Fechar Aplicação                      \\
+//****************************************************************************\\
+procedure TfrmBarraTop.FormCreate(Sender: TObject);
+begin
+  corForm.RetanguloMouseMove(rctBarraTop, frmMenuPrincipal);
+end;
+
+procedure TfrmBarraTop.rctTopSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+{$EndRegion}
+
+{$Region 'Início enventos Move e Leave dos botões'}
+//****************************************************************************\\
+//                     Inicio Eventos Move e Leave do Botões                  \\
+//****************************************************************************\\
+procedure TfrmBarraTop.ChangeMouseLeave(Sender: TObject);
+var componente : TRectangle;
+begin
+  componente := TRectangle(Sender);
+  corForm.RetanguloMouseLeave(componente);
+end;
+
+procedure TfrmBarraTop.ChangeMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Single);
+var componente : TRectangle;
+begin
+  componente := TRectangle(Sender);
+  corForm.RetanguloMouseMove(componente, frmMenuPrincipal);
+end;
+
+{$EndRegion}
+
+end.
